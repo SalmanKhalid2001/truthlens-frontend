@@ -3,6 +3,7 @@ import ClaimForm from "./components/ClaimForm.jsx";
 import ResultCard from "./components/ResultCard.jsx";
 import HistorySidebar from "./components/HistorySidebar.jsx";
 import { verifyClaim } from "./api.js";
+import API_BASE from "./config/apiBase";  // ✅ Import API_BASE
 
 export default function App() {
   const [loading, setLoading] = useState(false);
@@ -24,15 +25,13 @@ export default function App() {
     }
   }
 
-  // ⭐ NEW: load history item
+  // ⭐ FIXED: Use API_BASE instead of hardcoded localhost
   async function loadHistory(id) {
     setLoading(true);
     setError(null);
 
     try {
-      const res = await fetch(
-        `http://localhost:5050/api/history/${id}`
-      );
+      const res = await fetch(`${API_BASE}/api/history/${id}`);  // ✅ Fixed
       const data = await res.json();
       setResult(data);
     } catch (e) {
@@ -44,10 +43,8 @@ export default function App() {
 
   return (
     <div className="app-layout">
-      {/* Sidebar */}
       <HistorySidebar onSelect={loadHistory} />
 
-      {/* EXISTING UI — untouched */}
       <div className="container">
         <h1>AI New Authentication</h1>
         <div className="sub">

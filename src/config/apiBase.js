@@ -1,5 +1,5 @@
 const API_BASE =
   import.meta.env.VITE_API_BASE ||
-  "http://localhost:5050";
+  "https://truthlens-backend-production-11e8.up.railway.app";
 
 export default API_BASE;
