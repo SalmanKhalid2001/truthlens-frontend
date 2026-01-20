@@ -1,0 +1,64 @@
+/* Sidebar */
+.history-sidebar {
+  width: 260px;
+  padding: 14px;
+  background: #0f172a;
+  border-right: 1px solid #1e293b;
+  color: #e5e7eb;
+}
+
+/* Header */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-btn:hover {
+  color: #e5e7eb;
+}
+
+/* List */
+.history-list {
+  overflow-y: auto;
+  max-height: calc(100vh - 70px);
+}
+
+/* Items */
+.history-item {
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.history-item:hover {
+  background: #1e293b;
+}
+
+.history-item.active {
+  background: #2563eb;
+}
+
+/* Toggle button */
+.sidebar-toggle {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
