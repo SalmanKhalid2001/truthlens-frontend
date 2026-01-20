@@ -1,2 +1,7 @@
 node_modules/
 dist/
+<<<<<<< HEAD
+=======
+.env
+.env.local
+>>>>>>> 7b469723ade19614bda238e8f5bb37b33cca302d
